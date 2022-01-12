@@ -1,0 +1,217 @@
+\documentclass[12pt,a4paper,openany]{book}
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+% PACKAGES
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+% Selección de idioma
+\usepackage[spanish]{babel}
+
+% algo
+\usepackage[utf8]{inputenc}
+
+% Tablas
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol} 
+\usepackage{booktabs}%\usepackage{booktabs, calc} %This is the package to use to have nice-looking tables. More documentation on the tables in LateX: https://www.tug.org/pracjourn/2007-1/mori/mori.pdf
+\usepackage{threeparttable} 
+
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+
+\graphicspath{{../figuras/}}
+
+\begin{document}
+	
+	%---------------------------------------------------------------------------
+	% TITLE PAGE
+	%---------------------------------------------------------------------------
+	\doublespacing
+	
+	\title{Boletín COVID-19}
+	\author{Autores}
+	
+	\date{}
+	
+	%\maketitle
+	
+	
+	%\thispagestyle{empty}\baselineskip1.385\baselineskip \newpage{}
+	
+	\pagestyle{plain}\pagenumbering{arabic}
+	
+	%insertar el cover
+	%\includepdf[pages={1}]{../editorial/cover_boletin_8.pdf}
+	\clearpage
+	
+	\pagestyle{plain}\pagenumbering{arabic}
+	
+	\clearpage
+	
+	
+	\begin{center}
+		{\large Gobierno Regional Cusco}
+		
+		\textbf{MSP. Javier Ramírez Escóbar}
+		
+		Gerente Regional \vspace{1.0cm}
+		
+		Dirección Ejecutiva de Inteligencia Sanitaria
+		
+		\textbf{MSP. Darío Francisco Navarro Mendoza}
+		
+		Director
+		
+		\vspace{1.5cm}
+		\noindent
+		\begin{minipage}[t]{.45\textwidth}
+			\centering
+			Dirección de Epidemiología e Investigación  \\
+			\textbf{MSC. Fátima R. Concha Velasco}\\
+			Directora \vspace{1.0cm}\\
+			% Por orden alfabético del apellido
+			\textit{Equipo de Epidemiología e Investigación }\vspace{.5cm}\\
+			Econ. Karen Yorka Aguilar Zuñiga \\
+			M.C Edwards Adrian Aguirre Valenzuela \\
+			Lic. Nadia Isabel Cáceres Pillco \\
+			Econ. Johar Jurimao Cassa Avendaño \\
+			TAP. Edgar Waldo Capcha Salcedo \\
+			M.S.P. Pablo Fidel Grajeda Ancca \\
+			M.C. Katia Luque Quispe \\
+			M.C. Ana Gabriela Eulalia Moncada Arias \\
+			Lic. Enf. Ruth Nelly Oscco Abarca \\
+			Lic. Enf. Guinetta Margarita Yabar Herrera \vspace{1.5cm}\\	
+		\end{minipage}
+		\hfill
+		\noindent
+		\begin{minipage}[t]{.45\textwidth}
+			\centering
+			Dirección de Estadística, Informática y Telecomunicaciones\\
+			\textbf{Ing. Abel Rimasca Chacón} \\
+			Director \vspace{1.0cm} \\
+			% Por orden alfabético del apellido
+			\textit{Equipo de Estadística, Informática y Telecomunicaciones} \vspace{.5cm} \\
+			Ing. Iván Atayupanqui Rondón \\
+			Ing. Miguel Ángel Campana Alarcón \\
+			Ing. Uriel Lacuta Farfán \\
+			Ing. Jorge Fernando Lovatón Ramos \\
+			Ing. Danny Robert Moscoso Sánchez \\
+			Lic. Ray Milton Valderrama Álverez \vspace{1.5cm}\\
+		\end{minipage}
+		Secretaria: Sra. Ruth Baca Mendoza
+	\end{center}
+	\let\cleardoublepage\clearpage
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	%\mainmatter
+	%---------------------------------------------------------------------------
+	% CAPÍTULO: EDITORIAL
+	%---------------------------------------------------------------------------
+	
+	\chapter*{Editorial}
+	\addcontentsline{toc}{chapter}{Editorial}
+	
+	\begin{wrapfigure}{l}{8.5cm}
+		\label{wrap-fig:1}
+		\includegraphics[width=8.5cm]{../editorial/foto_editorial.jpeg}
+		\caption*{
+			\centering
+			MSC. Fátima Rosario Concha Velasco
+			
+			\textit{Directora de Epidemiología e Investigación}
+			
+			GERESA, Cusco }
+	\end{wrapfigure}
+	
+	\noindent Un nuevo coronavirus, el SARS-CoV-2, apareció en diciembre del 2019, cuya transmisión a través del contacto directo o gotitas respiratorias dependiendo del tiempo y contacto cercano es más fácil y rápida en relación a los otros coronovarius. El virus se propagó rápidamente por todo el mundo a través de los viajeros, generando a la vez un incremento de la mortalidad. Se reconoce que los números notificados son subestimaciones de los casos de infección reales, considerando a los individuos asintomáticos con COVID-19 que no fueron identificados y rastreados.
+	A nivel mundial, los gobiernos y las agencias tomaron medidas para contener la propagación de COVID-19, con rutinas aplicadas para la atención sanitaria y el distanciamiento social. Aun así, estas estrategias tuvieron consecuencias, como la crisis económica por el cierre de negocios y el cese de labores en diversas industrias. La calidad de la educación se vio afectada, ya que muchas escuelas carecían de plataformas y servicios de red. Por lo cual, la necesidad de continuar con la reactivación económica, traduce fortalecer a la brevedad la vacunación para COVID-19 en todos los grupos etarios. Continuar con las recomendaciones comunitarias para el distanciamiento y uso de máscaras que incluyen la prevención combinada y control de la fuente para las personas sintomáticas y asintomáticas. Así como, continuar con la oportuna identificación y rastreo de contactos de sintomáticos y asintomáticos.
+	La vacunación preventiva generalizada puede reducir costos y desempeñar un papel fundamental en la protección de las personas contra la infección por COVID-19, facilitando la reducción significativa de la transmisión dentro de la población del rebaño. La preocupación de depender de las vacunas “sólo S”, por la presencia de mutaciones en la proteína pico (S) del SARS-CoV-2, genera una selección de variantes de COVID-19, con la ausencia del anticuerpo del huésped para empujar sistemáticamente al virus en una dirección determinada, aumentando la transmisibilidad y competencia entre ellas que podrían afectar la neutralización por sueros convalecientes. Siendo necesario considerar tanto la magnitud del cambio en la neutralización de anticuerpos, así como la posibilidad de que muchas vacunas candidatas necesiten ser rediseñadas y probadas.  Sin embargo, hasta la fecha, la vacunación para COVID-19 aun es la mejor manera de combatir la infección por SARS-CoV-2. Se han aprobado 8 tipos de vacuna para ser aplicados entre grupos prioritarios bajo una autorización de uso de emergencia (EUA), incluida la vacuna Moderna mRNA-1273, vacuna Pfizer-BioNtech BNT162b2, China Las vacunas CoronaVac ™ y COVID-19 de Sinopharm, las vacunas Sputnik V y EpiVacCorona de Rusia, el nuevo coronavirus ChAdOx1 2019 de AstraZeneca (nCoV-19), y el Ad26.COV2.S. de Janssen.
+	Por lo cual, a partir del conocimiento generado en la información de la situación actual de COVID-19 en la Región Cusco, es importante continuar fortaleciendo la vacunación para COVID-19, la cual como se ha mencionado es la principal herramienta en la lucha contra el COVID-19, ayudándonos a desarrollar inmunidad, protegiendo a las personas que nos rodean, principalmente a los que tienen más riesgo de complicaciones graves. Así como también, es necesario que se siga fortaleciendo la detección y rastreo oportuno de casos para facilitar el control de la transmisión de la enfermedad.
+	
+	
+	
+	\begin{figure}[h]
+		\caption{Tendencia Provincial de Incidencia acumulada de COVID-19, hasta la SE 38, 2021}\label{fig:mortalidad_provincias}
+		\begin{center}
+			%\includegraphics[width=0.65\linewidth]{../figuras/figura17}
+		\end{center}
+		{\footnotesize {Fuente de datos: SINADEF.}}
+	\end{figure}
+	
+	\newpage
+	
+	\section*{Evaluación Provincial de 5 Indicadores}
+	\noindent El objetivo de estas figuras es comparar a cada provincia consigo misma de acuerdo a su historia  en la primera ola (en el año 2020). Se evaluaron los siguientes indicadores: incidencia, tasa de mortalidad, tasa de positividad molecular, tasa de positividad antigénica, y exceso de defunciones para cada provincia.
+	
+	%---------------------------------------------------------------------------
+	% CAPÍTULO: DEFUNCIONES CERO
+	%---------------------------------------------------------------------------
+	\chapter*{Semanas con Cero Defunciones por COVID-19 por Semana a Nivel Provincial}
+	\addcontentsline{toc}{chapter}{Defunciones Cero}
+	\noindent En las últimas semanas ha existido un gran interés en la disminución de defunciones por COVID-19 a nivel nacional. Cusco ha experimentado una importante disminución de fallecidos por esta enfermedad.  La siguiente figura (Figura 32) muestra la cantidad de fallecidos por semana epidemiológica. Se muestra el análisis desde la semana 31 a la 38 (del 1 de agosto al 25 de septiembre). Las regiones pintadas de celeste indican cero fallecidos por COVID en la respectiva provincia.
+	
+	Es interesante notar que existe una disminución de defunciones en todas las provincias en el periodo analizado. Espinar es un caso notable en no reportar defunciones en estas últimas semanas. Aunque la Provincia Cusco siempre ha reportado fallecidos por COVID, ésta ha disminuido a lo largo del periodo analizado. La última semana (SE38) 9 de las 13 provincias reportaron cero defunciones.
+	
+	[Insertar figura]
+	
+	
+	%---------------------------------------------------------------------------
+	% CAPÍTULO: AGRADECIMIENTOS
+	%---------------------------------------------------------------------------
+	\chapter*{Agradecimientos}
+	\addcontentsline{toc}{chapter}{Agradecimientos}
+	
+	\centering
+	{\large El presente Boletín Epidemiológico COVID-19 se ha elaborado gracias a la información y esfuerzo conjunto de los Equipos de Inteligencia Sanitaria de los Hospitales y Redes de la GERESA Cusco:
+		
+		\vspace{0.5cm}
+		\noindent
+		\begin{minipage}[t]{.45\textwidth}
+			\centering
+			Hospital Regional del Cusco \\
+			M.S.P. Marina Ochoa Linares \vspace{0.5cm}\\
+			Hospital Antonio Lorena \\
+			Dr. Rony Monge \vspace{.5cm}\\
+			Hospital Nacional Adolfo Guevara Velazco\\
+			M.S.P. Lucio Velasquez Cuentas \vspace{.5cm}\\
+			Red de Salud Norte \\
+			M.C. Guido Giraldo Alencastre\vspace{0.5cm}\\
+			Red de Salud Sur\\
+			Lic. Luz Marina Bernable Villasante \vspace{0.5cm}\\	
+		\end{minipage}
+		\hfill
+		\noindent
+		\begin{minipage}[t]{.45\textwidth}
+			\centering
+			Red de Salud La Convención\\
+			Dr. David Coanqui Pacori\vspace{0.5cm}\\
+			Red de Salud Chumbivilcas\\
+			Lic. Eduarda Benito Calderón \vspace{.5cm}\\
+			Red de Salud Canas Canchis Espinar\\
+			MC. William Achahui Mercado \vspace{.5cm}\\
+			Red de Salud Kimbiri Pichari \\
+			Lic Fiorela Alvarez Nihua\vspace{0.5cm}\\	
+		\end{minipage}
+		%---------------------------------------------------------------------------
+		% CAPÍTULO: AGRADECIMIENTOS
+		%---------------------------------------------------------------------------
+		\chapter*{Diseño y Edición}
+		\addcontentsline{toc}{chapter}{Diseño y Edición}
+		\begin{center}
+			
+			% Como siempre, por orden alfabético del apellido
+			\href{https://sites.google.com/view/joharcassa}{Econ. Johar Jurimao Cassa Avendaño}
+			
+			MSC. Fátima R. Concha Velasco
+			
+			M.C. Ana Gabriela Eulalia Moncada Arias 
+		\end{center}
+		
+		%insertar la última página
+		\includepdf[pages={1}]{../editorial/pagina_final.pdf}
+		\clearpage
+		
+	\end{document}

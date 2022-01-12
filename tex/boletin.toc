@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Editorial}{6}{}%
+\contentsline {chapter}{Defunciones Cero}{9}{}%
+\contentsline {chapter}{Agradecimientos}{10}{}%
+\contentsline {chapter}{Diseño y Edición}{11}{}%
